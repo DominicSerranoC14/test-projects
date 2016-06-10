@@ -1,0 +1,245 @@
+/*  styling for ball */
+
+/*****************************************/
+/*  Base Styles for ball size and shape  */
+/*****************************************/
+.ball {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: tomato;
+  position: fixed;
+  bottom: 0;
+}
+
+/*****************************************/
+/*  Adds animation to bounce ball  */
+/*****************************************/
+
+.ballBounce {
+  animation: ball-bounce 5s 0s 1 forwards;
+}
+
+@keyframes ball-bounce {
+
+  0% {
+    bottom: 0;
+    animation-timing-function: ease-in;
+    left: 0;
+  }
+  10% {
+    bottom: 400px;
+    animation-timing-function: ease-out;
+    left: 100px;
+  }
+  20% {
+    bottom: 0px;
+    animation-timing-function: ease-in;
+    left: 200px;
+  }
+  30% {
+    bottom: 300px;
+    animation-timing-function: ease-out;
+    left: 300px;
+  }
+  40% {
+    bottom: 0;
+    animation-timing-function: ease-in;
+    left: 400px;
+  }
+  50% {
+    bottom: 200px;
+    animation-timing-function: ease-out;
+    left: 500px;
+  }
+  60% {
+    bottom: 0px;
+    animation-timing-function: ease-in;
+    left: 600px;
+  }
+  70% {
+    bottom: 100px;
+    animation-timing-function: ease-out;
+    left: 700px;
+  }
+  80% {
+    bottom: 0px;
+    animation-timing-function: ease-in;
+    left: 800px;
+  }
+  90% {
+    bottom: 50px;
+    animation-timing-function: ease-out;
+    left: 900px;
+  }
+  100% {
+    bottom: 0;
+    animation-timing-function: ease-in;
+    left: 1000px;
+  }
+
+}/******* End ball bounce animation *****/
+
+
+/*****************************************/
+/*  Changes the ball to a square  */
+/*****************************************/
+
+.square {
+  width: 100px;
+  height: 100px;
+  border-radius: 0;
+  background-color: tomato;
+  position: fixed;
+  bottom: 0;
+}
+
+.toSquare {
+  animation: to-square 2s 0s 1 ease-in;
+}
+
+@keyframes to-square {
+
+  0% {
+    border-radius: 50%;
+    transform: rotate(-45deg);
+  }
+  25% {
+    border-radius: 40%;
+    transform: rotate(-90deg);
+  }
+  50% {
+    border-radius: 30%;
+    transform: rotate(-180deg);
+  }
+  75% {
+    border-radius: 20%;
+    transform: rotate(-270deg);
+  }
+  100% {
+    border-radius: 10%;
+    transform: rotate(-360deg);
+  }
+
+}/******** end change shape animation *******/
+
+
+/*****************************************/
+/*  Changes a square to a circle  */
+/*****************************************/
+
+.toCircle {
+  animation: to-circle 2s 0s 1 ease-in;
+}
+
+@keyframes to-circle {
+
+  0% {
+    border-radius: 10%;
+    transform: rotate(45deg);
+  }
+  25% {
+    border-radius: 20%;
+    transform: rotate(90deg);
+  }
+  50% {
+    border-radius: 30%;
+    transform: rotate(180deg);
+  }
+  75% {
+    border-radius: 40%;
+    transform: rotate(270deg);
+  }
+  100% {
+    border-radius: 50%;
+    transform: rotate(360deg);
+  }
+
+}/******** end change to circle animation *******/
+
+
+/*****************************************/
+/*  Moves ball back to starting postition */
+/*****************************************/
+
+.ballReset {
+  animation: ball-reset 2s 0s 1 ease-in;
+}
+
+@keyframes ball-reset {
+
+  0% {
+    animation-timing-function: ease-in;
+    transform: rotate(0deg);
+    left: 1000px;
+    opacity: 1;
+    border-radius: 30% 50% 50% 50%;
+  }
+  10% {
+    animation-timing-function: ease-out;
+    transform: rotate(-18deg);
+    left: 920px;
+    border-radius: 30% 50% 30% 50%;
+  }
+  20% {
+    animation-timing-function: ease-in;
+    transform: rotate(-36deg);
+    left: 820px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 30% 50% 30% 45%;
+  }
+  30% {
+    animation-timing-function: ease-out;
+    transform: rotate(-72deg);
+    left: 720px;
+    border-radius: 30% 50% 35% 50%;
+  }
+  40% {
+
+    animation-timing-function: ease-in;
+    transform: rotate(-108deg);
+    left: 620px;
+    background-color: rgb(0, 255, 0);
+    border-radius: 30% 40% 35% 40%;
+  }
+  50% {
+    animation-timing-function: ease-out;
+    transform: rotate(-144deg);
+    left: 520px;
+    opacity: .1;
+    border-radius: 35% 30% 35% 50%;
+  }
+  60% {
+    animation-timing-function: ease-in;
+    transform: rotate(-216deg);
+    left: 420px;
+    background-color: rgb(0, 255, 0);
+    border-radius: 45% 40% 40% 55%;
+  }
+  70% {
+    animation-timing-function: ease-out;
+    transform: rotate(-252deg);
+    left: 320px;
+    border-radius: 50% 35% 30% 35%;
+  }
+  80% {
+    animation-timing-function: ease-in;
+    transform: rotate(-288deg);
+    left: 220px;
+    background-color: rgb(0, 0, 255);
+    border-radius: 40% 35% 35% 40%;
+  }
+  90% {
+    animation-timing-function: ease-out;
+    transform: rotate(-324deg);
+    left: 120px;
+    border-radius: 50% 30% 50% 30%;
+  }
+  100% {
+    animation-timing-function: ease-in;
+    transform: rotate(-360deg);
+    left: 20px;
+    opacity: 1;
+  }
+
+}/******* End ball reset animation *****/
